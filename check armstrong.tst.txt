@@ -1,0 +1,35 @@
+import java.util.Scanner;
+public class Main {
+	
+	static int power(int x,int y){
+		if(y==0)return 1;
+		int z=power(x,y-1);
+		return x*z;
+	}
+	public static void main(String[] args) {
+		Scanner s=new Scanner(System.in);
+		int n=s.nextInt();
+		int t=n;
+		int unit=0;
+		while(t>0){
+			t=t/10;
+			unit++;
+		}
+		int sum=0;
+		t=n;
+		while(t>0){
+			int x=t%10;
+			sum=sum+power(x,unit);
+			t=t/10;
+		}
+		if(sum==n){
+			System.out.print(true);
+
+		}
+		else{
+			System.out.print(false);
+		}
+		
+
+	}
+}

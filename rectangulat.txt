@@ -1,0 +1,43 @@
+public class solution {
+
+	public static void print(int n) {
+
+	for(int i=1;i<=n;i++){
+		for(int j=n;j>n-i;j--){
+			System.out.print(j);
+
+		}
+		int print=n-i+1;
+		int times=2*print-3;
+		for(int j=0;j<times;j++){
+			System.out.print(print);
+
+		}
+		for(int k=n-i+1;k<=n;k++){
+			if(k==1)continue;
+			System.out.print(k);
+
+		}
+		System.out.println();
+
+	}
+	for(int i=n-1;i>0;i--){
+		for(int j=0;j<i;j++){
+			System.out.print(n-j);
+		}
+		int print=n-i+1;
+		int times=2*print-3;
+		for(int k=0;k<times;k++){
+			System.out.print(print);
+
+		}
+		for(int x=n-i+1;x<=n;x++){
+			System.out.print(x);
+		}
+		System.out.println();
+	}
+
+
+	}
+
+}

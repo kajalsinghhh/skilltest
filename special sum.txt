@@ -1,0 +1,28 @@
+public class solution {
+
+	static int specialSum(int n){
+		int s=n;
+		int sum=0;
+		while(s>0){
+			sum=sum+s%10;
+			s=s/10;
+		}
+	if(sum/10==0){
+		return sum;
+	}
+	else{
+		return specialSum(sum);
+	}
+	}
+
+	public static int sum(int arr[]){
+		int n=arr.length;
+		int sum=0;
+		for(int i=0;i<n;i++){
+			sum=sum+arr[i];
+		}
+		return specialSum(sum);
+	
+         //Write code here 
+	}
+}
